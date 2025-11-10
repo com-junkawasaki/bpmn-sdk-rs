@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "id": "@id",
+    "type": "@type",
+    "ex": "https://gftd.ai/bpmn-sdk#",
+    "dct": "http://purl.org/dc/terms/",
+    "name": "dct:title",
+    "description": "dct:description"
+  },
+  "@graph": [
+    {
+      "id": "ex:capability:dsl-modeling",
+      "type": "ex:Capability",
+      "name": "DSL Process Modeling",
+      "description": "Type-safe DSL for building BPMN process definitions with compile-time validation"
+    },
+    {
+      "id": "ex:capability:validation",
+      "type": "ex:Capability",
+      "name": "Static Validation",
+      "description": "Validate process definitions before compilation with detailed error messages"
+    },
+    {
+      "id": "ex:capability:human-tasks",
+      "type": "ex:Capability",
+      "name": "Human Task Management",
+      "description": "Support for user tasks, SLAs, escalation, and assignment policies"
+    },
+    {
+      "id": "ex:capability:observability",
+      "type": "ex:Capability",
+      "name": "Monitoring & Observability",
+      "description": "Metrics, tracing, and alerting support for process execution"
+    },
+    {
+      "id": "ex:capability:runtime-integration",
+      "type": "ex:Capability",
+      "name": "Runtime Integration",
+      "description": "Seamless integration with bpmn-engine for process execution"
+    }
+  ]
+}
+

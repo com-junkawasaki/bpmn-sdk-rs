@@ -1,0 +1,89 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "id": "@id",
+    "type": "@type",
+    "ex": "https://gftd.ai/bpmn-sdk#",
+    "dct": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "name": "dct:title",
+    "description": "dct:description",
+    "createdAt": {"@id": "dct:created", "@type": "xsd:dateTime"},
+    "updatedAt": {"@id": "dct:modified", "@type": "xsd:dateTime"},
+    "schemaVersion": "dct:hasVersion",
+    "conformsTo": {"@id": "dct:conformsTo", "@type": "@id"},
+    "goal": "ex:goal",
+    "status": "ex:status",
+    "tags": {"@id": "ex:tags", "@container": "@set"},
+    "capabilities": {"@id": "ex:hasCapability", "@container": "@set"},
+    "activities": {"@id": "ex:hasActivity", "@container": "@set"},
+    "dependsOn": {"@id": "ex:dependsOn", "@type": "@id", "@container": "@set"}
+  },
+  "id": "https://gftd.ai/project/bpmn-sdk",
+  "type": "ex:Project",
+  "name": "BPMN SDK - Rust DSL",
+  "description": "Type-safe Rust DSL for declarative BPMN process modeling. Provides a fluent, compile-time validated API for building BPMN 2.0 process definitions.",
+  "goal": "Create a complete type-safe Rust DSL for declarative BPMN process modeling that compiles to bpmn-engine's ProcessDefinition format",
+  "status": "active",
+  "schemaVersion": "0.1.0",
+  "conformsTo": [
+    "https://gftd.ai/standards/semantic-driven-development",
+    "https://gftd.ai/standards/owl-driven-development"
+  ],
+  "tags": ["rust", "bpmn", "dsl", "workflow", "process-modeling", "type-safe"],
+  "capabilities": [
+    {
+      "id": "ex:capability:dsl-modeling",
+      "name": "DSL Process Modeling",
+      "description": "Type-safe DSL for building BPMN process definitions"
+    },
+    {
+      "id": "ex:capability:validation",
+      "name": "Static Validation",
+      "description": "Validate process definitions before compilation"
+    },
+    {
+      "id": "ex:capability:human-tasks",
+      "name": "Human Task Management",
+      "description": "Support for user tasks, SLAs, and escalation"
+    },
+    {
+      "id": "ex:capability:observability",
+      "name": "Monitoring & Observability",
+      "description": "Metrics, tracing, and alerting support"
+    }
+  ],
+  "activities": [
+    {
+      "id": "ex:activity:dsl-construction",
+      "name": "DSL Construction",
+      "description": "Build BPMN processes using fluent DSL API"
+    },
+    {
+      "id": "ex:activity:validation",
+      "name": "Process Validation",
+      "description": "Validate process structure and semantics"
+    },
+    {
+      "id": "ex:activity:compilation",
+      "name": "Compilation",
+      "description": "Compile DSL IR to ProcessDefinition"
+    },
+    {
+      "id": "ex:activity:runtime-integration",
+      "name": "Runtime Integration",
+      "description": "Integrate with bpmn-engine for execution"
+    }
+  ],
+  "dependsOn": [
+    "https://gftd.ai/project/bpmn-engine"
+  ],
+  "createdAt": "2025-01-27T00:00:00+09:00",
+  "updatedAt": "2025-01-27T00:00:00+09:00"
+}
+

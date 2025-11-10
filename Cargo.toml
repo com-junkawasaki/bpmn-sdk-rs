@@ -1,0 +1,45 @@
+[package]
+name = "bpmn-sdk"
+version = "0.1.0"
+edition = "2021"
+authors = ["gftdcojp"]
+license = "MIT OR Apache-2.0"
+description = "Type-safe Rust DSL for declarative BPMN process modeling"
+repository = "https://github.com/gftdcojp/bpmn-sdk"
+readme = "README.md"
+
+[dependencies]
+# Core dependencies
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+
+# bpmn-engine integration
+# Note: Update this to path dependency once bpmn-engine is available
+# bpmn-engine = { path = "../bpmn-engine" }
+
+# Optional: Procedural macros support
+# proc-macro2 = "1.0"
+# quote = "1.0"
+# syn = { version = "2.0", features = ["full"] }
+
+[dev-dependencies]
+# Testing
+criterion = "0.5"
+
+[lib]
+name = "bpmn_sdk"
+path = "src/lib.rs"
+
+[[example]]
+name = "invoice_approval"
+path = "examples/invoice_approval.rs"
+
+[[example]]
+name = "order_processing"
+path = "examples/order_processing.rs"
+
+[[example]]
+name = "e2e_integration"
+path = "examples/e2e_integration.rs"
+
