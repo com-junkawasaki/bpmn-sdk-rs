@@ -34,8 +34,9 @@ impl Converter {
 
 /// Placeholder for ProcessDefinition
 /// 
-/// In a real implementation, this would be:
-/// ```rust
+/// In a real implementation, this would use bpmn-engine's ProcessDefinition:
+/// 
+/// ```ignore
 /// pub use bpmn_engine::model::ProcessDefinition;
 /// ```
 #[derive(Debug, Clone)]

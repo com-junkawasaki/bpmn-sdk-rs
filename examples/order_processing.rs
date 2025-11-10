@@ -39,7 +39,7 @@ fn main() {
     match bpmn_sdk::validate(&order_process) {
         Ok(validated) => {
             println!("Validation passed!");
-            let compiled = bpmn_sdk::compile(&validated);
+            let _compiled = bpmn_sdk::compile(&validated);
             println!("Compilation successful!");
         }
         Err(errors) => {

@@ -19,10 +19,10 @@ impl FlowBuilder {
     /// Start building a process
     pub fn process<F>(self, process_id: impl Into<ProcessId>, builder: F) -> BpmnIR<Unvalidated>
     where
-        F: FnOnce(ProcessBuilder) -> ProcessBuilder<crate::dsl::process::HasEnd>,
+        F: FnOnce(ProcessBuilder<crate::dsl::process::Uninitialized>) -> crate::core::BpmnIR<crate::core::Unvalidated>,
     {
         let process_builder = ProcessBuilder::new(process_id);
-        builder(process_builder).build()
+        builder(process_builder)
     }
 }
 
